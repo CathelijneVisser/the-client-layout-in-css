@@ -6,7 +6,36 @@
     <title>Advanced Layout 3</title>
     <link rel="stylesheet" href="../style.css" />
     <style>
-      /* Doe hier jouw ding! */
+      body {
+        display: grid;
+        grid-template-columns: 1fr 2fr 6fr;
+        grid-template-rows: 1fr 3fr 2fr 3fr 2fr 3fr 1fr;
+        /* grid-template-areas:
+          ". inhoud inhoud"
+          "head inhoud inhoud"
+          ". inhoud inhoud"
+          "navigatie inhoud inhoud"
+          ". inhoud inhoud"
+          "foot inhoud inhoud"
+          ". inhoud inhoud"; */
+      }
+
+      header {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+
+      nav {
+        grid-area: 4 / 1 / 5 / 3;
+      }
+
+      main {
+        z-index: -1;
+        grid-area: 1 / 2 / 8 / 4;
+      }
+
+      footer {
+        grid-area: 6 / 1 / 7 / 3;
+      }
     </style>
   </head>
   <body id="advanced-layout-3">
